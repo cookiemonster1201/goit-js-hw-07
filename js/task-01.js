@@ -1,15 +1,15 @@
 const categoriesListRef = document.querySelector("#categories");
-const subcategoriesListRef = document.querySelectorAll(".item");
+const subcategoriesListRef = [...categoriesListRef.children];
 
 const countCategories = (categoriesList) =>
-  console.log(`В списке ${categoriesListRef.childElementCount} категории`);
+  console.log(`В списке ${categoriesListRef.children.length} категории`);
 countCategories(categoriesListRef);
 
 const showSubcategoryDetails = (subcategoriesList) => {
   subcategoriesList.forEach((subCategory) => {
-    let titleRef = subCategory.firstElementChild;
+    let subCategoryTitleRef = subCategory.firstElementChild;
     console.log(
-      `Категория: '${titleRef.textContent}'; Количество элементов: ${titleRef.nextElementSibling.childElementCount}`
+      `Категория: '${subCategoryTitleRef.textContent}'; Количество элементов: ${subCategoryTitleRef.nextElementSibling.childElementCount}`
     );
   });
 };
