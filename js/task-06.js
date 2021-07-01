@@ -1,7 +1,7 @@
 const inputRef = document.querySelector("input#validation-input");
 console.log(inputRef);
 
-const onInputBlur = () => {
+const onInputBlur = (event) => {
   if (
     event.currentTarget.value.length === +inputRef.getAttribute("data-length")
   ) {
@@ -11,7 +11,7 @@ const onInputBlur = () => {
   }
 };
 
-const onInputFocus = () => {
+const onInputFocus = (event) => {
   if (event.currentTarget.classList.contains("valid")) {
     event.currentTarget.classList.remove("valid");
   } else {
