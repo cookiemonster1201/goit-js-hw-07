@@ -13,25 +13,6 @@ const images = [
   },
 ];
 
-// const galleryRef = document.querySelector("ul[id = gallery]");
-
-// const makeImage = ({ url, alt }) => {
-//   const imageRef = document.createElement("img");
-//   imageRef.src = url;
-//   imageRef.alt = alt;
-//   imageRef.width = "400";
-//   return imageRef;
-// };
-
-// const imagesList = images.map((image) => {
-//   const galleryItemRef = document.createElement("li");
-//   galleryItemRef.classList.add("gallery__item");
-//   galleryItemRef.append(makeImage(image));
-//   return galleryItemRef;
-// });
-
-// galleryRef.append(...imagesList);
-
 const galleryRef = document.querySelector("ul#gallery");
 
 const makeGalleryItemMarkup = ({ url, alt }) =>
